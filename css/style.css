@@ -1,0 +1,203 @@
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: hsl(300, 24%, 96%);
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  padding: 50px;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  min-height: 65vh;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 50px 15px;
+  }
+}
+.container::before {
+  content: "";
+  background-image: url(../images/bg-pattern-top-desktop.svg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+}
+.container::after {
+  content: "";
+  background-image: url(../images/bg-pattern-bottom-desktop.svg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+}
+.container > .info {
+  max-width: 300px;
+  margin-right: 10px;
+}
+.container > .info h3 {
+  color: hsl(300, 43%, 22%);
+  font-size: 40px;
+  margin: 0;
+}
+.container > .info p {
+  color: hsl(303, 10%, 53%);
+  line-height: 1.5;
+}
+
+.rate .ra {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+}
+.rate .ra:nth-child(1) {
+  transform: translateX(-80px);
+  -webkit-transform: translateX(-80px);
+  -moz-transform: translateX(-80px);
+  -ms-transform: translateX(-80px);
+  -o-transform: translateX(-80px);
+}
+.rate .ra:nth-child(2) {
+  transform: translateX(-40px);
+  -webkit-transform: translateX(-40px);
+  -moz-transform: translateX(-40px);
+  -ms-transform: translateX(-40px);
+  -o-transform: translateX(-40px);
+}
+@media (max-width: 991px) {
+  .rate .ra:nth-child(1) {
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+  }
+  .rate .ra:nth-child(2) {
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+  }
+  .rate {
+    width: 100%;
+    margin: auto;
+  }
+  .rate .ra {
+    flex-direction: column;
+    margin: 0 auto 15px;
+  }
+  .container > .info {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+  }
+}
+.rate .stars {
+  color: goldenrod;
+}
+.rate p {
+  font-weight: bold;
+  color: hsl(300, 43%, 22%);
+  font-size: 15px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 20px;
+  justify-content: space-between;
+  margin: auto;
+}
+.box {
+  background-color: hsl(300, 43%, 22%);
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.box:nth-child(2) {
+  transform: translateY(30px);
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+}
+.box:nth-child(3) {
+  transform: translateY(60px);
+  -webkit-transform: translateY(60px);
+  -moz-transform: translateY(60px);
+  -ms-transform: translateY(60px);
+  -o-transform: translateY(60px);
+}
+@media (max-width: 991px) {
+  .box:nth-child(2) {
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+  }
+  .box:nth-child(3) {
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+  }
+}
+.box .info {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.box .info img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 50px;
+  margin-right: 25px;
+}
+.box .info h2 span {
+  color: hsl(333, 80%, 67%);
+}
+.box q {
+  line-height: 1.5;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
